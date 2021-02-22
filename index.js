@@ -13,7 +13,10 @@ app.get("/r/:subreddit", (req, res) => {
   const { subreddit } = req.params;
   res.render("subreddit", { subreddit });
 });
-
+app.get("/dogs", (req, res) => {
+  const dogs = ["lab", "collie", "poodle", "pitbull", "terrier"];
+  res.render("dogs", { dogs });
+});
 app.get("/rand", (req, res) => {
   const randNum = Math.floor(Math.random() * 10) + 1;
   res.render("random", { randNum });
